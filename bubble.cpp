@@ -10,8 +10,9 @@ void swap(int *xp, int *yp)
 }
 
 // A function to implement bubble sort
-void bubbleSort(int arr[], int n)
+void bubbleSort(vector<int> arr)
 {
+	int n = arr.size();
 	int i, j;
 	for (i = 0; i < n-1; i++)	
 	
@@ -22,10 +23,11 @@ void bubbleSort(int arr[], int n)
 }
 
 /* Function to print an array */
-void printArray(int arr[], int size)
+void printArray(vector<int> arr)
 {
+	int n = arr.size();
 	int i;
-	for (i = 0; i < size; i++)
+	for (i = 0; i < n; i++)
 		cout << arr[i] << " ";
 	cout << endl;
 	cout <<< endl;
@@ -36,13 +38,15 @@ int main()
 {
 
 
-	int arr[] = {64, 34, 25, 12, 22, 11, 90, 7, 8, 9, 1, 2, 3 , 6 , 5};
+// 	int arr[] = {64, 34, 25, 12, 22, 11, 90, 7, 8, 9, 1, 2, 3 , 6 , 5};
+	vector<int> arr = {64, 34, 25, 12, 22, 11, 90, 7, 8, 9, 1, 2, 3 , 6 , 5};
 
 //Hii there
-	int n = sizeof(arr)/sizeof(arr[0]);
-	bubbleSort(arr, n);
+// 	int n = sizeof(arr)/sizeof(arr[0]);
+	
+	bubbleSort(arr);
 	cout<<"Sorted array: \n";
-	printArray(arr, n);
+	printArray(arr);
 	return 0;
 }
 
